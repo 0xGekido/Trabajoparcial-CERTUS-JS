@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Productos</title>
+
+    <!-- Agregar los estilos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Cargar el estilo personalizado -->
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+    <!-- Logo de Whatsapp -->
+    <div id="contactoWhatsapp">
+    <a target="_blank" href="https://wa.me/51902215392">
+        <img src="img/WhatsApp.svg" alt="Contacto para Whatsapp">
+    </a>
+    </div>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Otaku Store</h1> <!-- Titulo 1 -->
+        <h2>Vive tu pasión otaku, encuentra tus tesoros aquí</h2>
+    </header>
+
+    <!-- Barra de Menú -->
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Otaku Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="form.html">Registrate</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#carritoModal">Carrito</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Modal Carrito -->
+        <div class="modal fade" id="carritoModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de compra</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carrito">
+                            <img id="carritoVacio" class="img-fluid mx-auto d-block" src="img/carro-vacio.png" alt="Carrito Vacio">
+                            <figcaption class="text-center">Actualmente usted no cuenta con ningún producto.</figcaption>    
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary disabled">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Parte principal -->
+    <main class="pageCatalogo container">
+
+        <!-- Sección de catalogo -->
+        <section class="row" id="catalogo">
+
+            <!-- Articulo 01 -->
+            <article class="col-6 col-md-4 col-lg-3">
+             
+                <img class="imgProduct" src="img/productos/luffy.png" alt="Luffy Lampara">
+              
+                <h3>Luffy Lámpara de Noche </h3>
+                <p>
+                    <span class="precioOriginal">S/142</span><span class="precioDescuento">-33%</span>
+                    <br><span class="precioFinal">S/115</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+
+             <!-- Articulo 02 -->
+             <article class="col-6 col-md-4 col-lg-3">
+
+                    <img class="imgProduct" src="img/productos/anillodragon.jpg" alt="Anillo Dragon">
+                
+                <h3>Anillo de Dragón Punk</h3>
+                <p>
+                    <span class="precioOriginal">S/32</span><span class="precioDescuento">-9%</span>
+                    <br><span class="precioFinal">S/29</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+            
+             <!-- Articulo 03 -->
+             <article class="col-6 col-md-4 col-lg-3">
+
+                    <img class="imgProduct" src="img/productos/tanjiro.png" alt="Juguete Tanjiro">
+                
+                <h3>Banpresto - Tanjiro Kamado</h3>
+                <p>
+                    <span class="precioOriginal">S/205</span><span class="precioDescuento">-40%</span>
+                    <br><span class="precioFinal">S/123</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+            
+             <!-- Articulo 04 -->
+             <article class="col-6 col-md-4 col-lg-3">
+
+                    <img class="imgProduct" src="img/productos/espadas.jpg" alt="Espadas God of War">
+                
+                <h3>Espadas de God of War</h3>
+                <p>
+                    <span class="precioOriginal">S/200</span><span class="precioDescuento">-11%</span>
+                    <br><span class="precioFinal">S/179</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+            
+            <!-- Articulo 05 -->
+            <article class="col-6 col-md-4 col-lg-3">
+             
+                <img class="imgProduct" src="img/productos/barcosunny.jpg" alt="Barco One Piece">
+              
+                <h3> Thousand Sunny One Piece</h3>
+                <p>
+                    <span class="precioOriginal">S/445</span><span class="precioDescuento">-25%</span>
+                    <br><span class="precioFinal">S/345</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+
+             <!-- Articulo 06 -->
+             <article class="col-6 col-md-4 col-lg-3">
+
+                    <img class="imgProduct" src="img/productos/zoro.jpg" alt="Juguete Zoro">
+                
+                <h3>Banpresto - Zoro Juguete</h3>
+                <p>
+                    <span class="precioOriginal">S/319</span><span class="precioDescuento">-50%</span>
+                    <br><span class="precioFinal">S/170</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+            
+             <!-- Articulo 07 -->
+             <article class="col-6 col-md-4 col-lg-3">
+
+                    <img class="imgProduct" src="img/productos/jiren.jpg" alt="Juguete Jiren">
+                
+                <h3>Banpresto - Jiren Juguete</h3>
+                <p>
+                    <span class="precioOriginal">S/97</span><span class="precioDescuento">-18%</span>
+                    <br><span class="precioFinal">S/80</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+            
+             <!-- Articulo 08 -->
+             <article class="col-6 col-md-4 col-lg-3">
+
+                    <img class="imgProduct" src="img/productos/vegito.jpg" alt="Super Saiyan God Vegito">
+                
+                <h3>Super Saiyan God Vegito</h3>
+                <p>
+                    <span class="precioOriginal">S/76</span><span class="precioDescuento">-10%</span>
+                    <br><span class="precioFinal">S/69</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+
+            <!-- Articulo 09 -->
+            <article class="col-6 col-md-4 col-lg-3">
+             
+                <img class="imgProduct" src="img/productos/esferas.jpg" alt="Esferas del Dragon">
+              
+                <h3>Esferas de Dragon Ball</h3>
+                <p>
+                    <span class="precioOriginal">S/249</span><span class="precioDescuento">-13%</span>
+                    <br><span class="precioFinal">S/219</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+
+             <!-- Articulo 10 -->
+             <article class="col-6 col-md-4 col-lg-3">
+
+                    <img class="imgProduct" src="img/productos/polo.jpg" alt="Polo Jujutsu Kaisen">
+                
+                <h3>Polo de Jujustu Kaisen</h3>
+                <p>
+                    <span class="precioOriginal">S/164</span><span class="precioDescuento">-25%</span>
+                    <br><span class="precioFinal">S/135</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+            
+             <!-- Articulo 11 -->
+             <article class="col-6 col-md-4 col-lg-3">
+
+                    <img class="imgProduct" src="img/productos/aretes.jpg" alt="Aretes Demon Slayer">
+                
+                <h3>Aretes de Demon Slayer</h3>
+                <p>
+                    <span class="precioOriginal">S/119</span><span class="precioDescuento">-50%</span>
+                    <br><span class="precioFinal">S/60</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+            
+             <!-- Articulo 12 -->
+             <article class="col-6 col-md-4 col-lg-3">
+
+                    <img class="imgProduct" src="img/productos/polera.jpg" alt="Polera Demon Slayer">
+                
+                <h3>Polera de Demon Slayer</h3>
+                <p>
+                    <span class="precioOriginal">S/247</span><span class="precioDescuento">-33%</span>
+                    <br><span class="precioFinal">S/165</span>
+                </p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        Creado por Julio Rodríguez - 2023
+    </footer>
+
+    <!-- Codigo Javascript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Cargar Javascript del proyecto -->
+     <script src="main.js"></script>
+
+</body>
+</html>

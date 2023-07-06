@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+
+    <!-- Agregar el Estilo Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Crear Cuenta</title>
+
+    <!-- Cargar JQUERY -->
+    <script src="js/libraries/jquery-3.7.0.min.js"></script>
+
+    <!-- Agregar el Estilo Personalizado -->
+    <link rel="stylesheet" href="custom.css">
+
+</head>
+
+<body>
+
+    <!-- Clase contenedor -->
+    <main class="container">
+
+        <!-- Contenido Centrado -->
+        <section class="row justify-content-around">
+
+                <!-- Formulario para la creacion de una cuenta -->
+                <form class="col-6 registroUsuario px-5 py-4" id="registroEstudiante" action="form-recibido.html"
+                    method="get">
+
+                    <h1>Registro de estudiante</h1>
+
+                    <!-- Entrada "Nombre" -->
+                    <div class="mb-3">
+                        <label class="form-label" for="txtName">Nombre:</label>
+                        <input class="form-control" type="text" name="FirstName" id="txtName" required>
+                        <small id="helpId" class="form-text text-muted">Escriba su nombre completo</small>
+                    </div>
+
+                    <!-- Entrada "Apellido" -->
+                    <div class="mb-3">
+                        <label for="txtSurname"> Apellido: </label>
+                        <input class="form-control" type="text" name="LastName" id="txtSurname" minlength="2" required>
+                        <small id="helpId" class="form-text text-muted">Escriba ambos apellidos</small>
+                    </div>
+
+                    <!-- Entrada "DNI" -->
+                    <div class="mb-3">
+                        <label class="form-label" for="intDNI"> DNI: </label>
+                        <input class="form-control" type="tel" name="DNI" id="intDNI" minlength="8" maxlength="8"
+                            required>
+                    </div>
+
+                    <!-- Entrada "Correo Electronico" -->
+                    <div class="mb-3">
+                        <label class="form-label" for="txtEmail"> E-Mail: </label>
+                        <input class="form-control" type="email" name="Email" id="txtEmail" maxlength="100" required>
+                    </div>
+
+                    <!-- Entrada "Fecha de Nacimiento" -->
+                    <div class="mb-3">
+                        <label class="form-label" for="txtFechaNacimiento"> Fecha de Nacimiento: </label>
+                        <input type="date" name="FechaNacimiento" id="txtFechaNacimiento" min="1970-12-31"
+                            max="2005-12-31" required>
+
+                    </div>
+
+                    <!-- Entrada "Sexo" -->
+                    <div class="mb-3">
+                        <p class="form-label">Género</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="bolMasculino" value="M"
+                                checked>
+                            <label class="form-check-label" for="bolMasculino" style="display:inline">Masculino</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="bolFemenina" value="F">
+                            <label class="form-check-label" for="bolFemenina" style="display:inline">Femenino</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="bolFemenina" value="N/A">
+                            <label class="form-check-label" for="bolIndefinido"
+                                style="display:inline">Indefinido</label>
+                        </div>
+
+                    </div>
+
+                    <!-- Entrada "Usuario" -->
+                    <div class="mb-3">
+                        <label class="form-label" for="txtUsuario"> Usuario:</label>
+                        <input class="form-control" type="text" name="Usuario" id="txtUsuario" required>
+                    </div>
+
+                    <!-- Entrada "Contraseña" -->
+                    <div class="mb-3">
+                        <label class="form-label" for="txtPassword"> Contraseña: </label>
+                        <input class="form-control" type="password" name="Contraseña" id="txtPassword"
+                            placeholder="Escriba su Contraseña">
+                        <!-- Entrada Repita Contraseña-->
+                        <input class="form-control" type="password" name="RepetirContraseña" id="txtRePassword"
+                            placeholder="Repita su Contraseña">
+                        <small id="helpId" class="form-text text-muted" style="font-size: small;">La contraseña debe
+                            tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una
+                            mayúscula.</small>
+
+                    </div>
+
+                    <!-- Entrada "Celular" -->
+                    <div class="mb-3">
+                        <label class="form-label" for="txtPhone"> Telefono / Celular: </label>
+                        <input class="form-control" type="tel" name="Telefono" id="txtPhone" maxlength="13" required>
+                    </div>
+
+                    <!-- Entrada "Direccion" -->
+                    <div class="mb-3">
+                        <label class="form-label" for="txtDireccion"> Dirección (Opcional): </label>
+                        <input class="form-control" type="text" name="Address1" id="txtDireccion"
+                            placeholder="Ejm: Calle Bolognesi..." maxlength="100">
+                        <input class="form-control" type="text" name="Address2" id="txtDireccion2"
+                            placeholder="Ejm: Chiclayo" maxlength="100">
+                    </div>
+
+                    <!-- Entrada "Acepta las condiciones" -->
+                    <div class="mb-3">
+                        <div class="form-check">
+                        <input id="CheckSize" class="form-check-input" type="checkbox" id="bolAceptar"required>
+                        <label id="TyC" class="form-check-label" class="form-label" for="bolAceptar" style="display:inline-block"> Acepta los <a href="#">Terminos y Condiciones</a></label>
+                        </div>
+                      </div>
+
+                    <!-- Entrada "Submit" -->
+                    <div class="mb-3">
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                    </div>
+
+                </form>
+        </section>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/validador.js"></script>
+
+</body>
+
+</html>
